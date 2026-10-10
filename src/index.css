@@ -7,7 +7,7 @@
 :root {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: #172033;
-  background: #f5f7fb;
+   background: transparent;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -15,7 +15,7 @@
 body {
   margin: 0;
   min-width: 320px;
-  background: #f5f7fb;
+  background: transparent;
   color: #172033;
 }
 
@@ -99,7 +99,7 @@ a {
 
 .public-page {
   min-height: 100vh;
-  background: #f7f8fc;
+  background: transparent;
 }
 
 .public-navbar {
@@ -108,7 +108,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
+  background: rgba(255, 255, 255, 0.82);
+backdrop-filter: blur(10px);
   border-bottom: 1px solid #e9ebf2;
   position: sticky;
   top: 0;
@@ -1046,4 +1047,6 @@ tbody tr:hover {
   .login-card {
     padding: 28px 20px;
   }
+ 
+
 }

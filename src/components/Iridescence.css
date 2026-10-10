@@ -1,0 +1,21 @@
+.iridescence-container {
+  width: 100%;
+  height: 100%;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-iridescence {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero > div:not(.hero-iridescence) {
+  position: relative;
+  z-index: 1;
+}

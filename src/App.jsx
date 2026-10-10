@@ -37,6 +37,7 @@ import {
   addRegistration,
   deleteRegistration,
 } from "./services/storage";
+import Iridescence from "./components/Iridescence";
 
 import "./index.css";
 
@@ -74,25 +75,25 @@ export default function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/event/:id" element={<EventDetails />} />
+    <div className="app-shell">
+      <div className="global-iridescence">
+        <Iridescence
+          color={[0.5, 0.6, 0.8]}
+          mouseReact={false}
+          amplitude={0.1}
+          speed={1}
+        />
+      </div>
 
-      <Route path="/login" element={<Login />} />
-
-      <Route
-        path="/admin/*"
-        element={
-          <ProtectedRoute>
-            <AdminLayout />
-          </ProtectedRoute>
-        }
-      />
-
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+      <div className="app-content">
+        <Routes>
+        
+        </Routes>
+      </div>
+    </div>
   );
 }
+
 
 // ---------------- PROTECTED ROUTE ----------------
 
@@ -128,8 +129,14 @@ function Home() {
           <Link to="/login">Admin</Link>
         </nav>
       </header>
+  
 
-      <section className="hero">
+     <section className="hero">
+  <div className="hero">
+    
+  </div>
+
+
         <div>
           <span className="badge">EVENT MANAGEMENT SYSTEM</span>
 
@@ -176,7 +183,7 @@ function Home() {
       <footer>
         <h3>Eventora</h3>
         <p>Modern Event Management System</p>
-        <p>Developer: Mr Arman</p>
+        <p>Developer: Mr Rehan Khan</p>
       </footer>
     </div>
   );
@@ -496,12 +503,7 @@ function Login() {
           </button>
         </form>
 
-        <div className="demo-login">
-          <strong>Demo Login</strong>
-          <p>admin@eventora.com</p>
-          <p>admin123</p>
-        </div>
-
+       
         <Link to="/">← Back to Website</Link>
       </div>
     </div>
